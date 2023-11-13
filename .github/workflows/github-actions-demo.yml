@@ -19,5 +19,4 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
-      - run: echo "${{ github.repositoryUrl }}"
-      - run: echo "${{ github.event.repository.url }}"
+      - run: echo "git clone ${{ github.server_url }}/${{ github.repository }} ${{ github.workspace }}/git_clone -b ${{ github.ref_name }}"
